@@ -1,3 +1,5 @@
+{% load bootstrap4 %}
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insta Galleries</title>
+
+
+  {% block styles %}
+  {% bootstrap_css %}
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  {% endblock %}
 </head>
 <body>
-    <p>it works</p>
+    {% include "navbar.html" %}
+    {%block content%}
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <p>works</p>
+              </div>
+          </div>
+      </div>
+    {%endblock%}
     
+    
+
+    {% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% bootstrap_javascript %}
+    {% endblock %}
 </body>
 </html>
