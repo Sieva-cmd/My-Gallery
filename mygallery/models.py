@@ -1,4 +1,4 @@
-from unicodedata import category
+
 from django.db import models
 
 
@@ -27,7 +27,7 @@ class Category(models.Model):
 class Image(models.Model):
     name =models.CharField(max_length=60)
     description=models.CharField(max_length=200)
-    image =models.ImageField(upload_to ='',blank=True)
+    image =models.ImageField(upload_to ='photos/',blank=True)
     location =models.ForeignKey(Location,on_delete=models.CASCADE,null=True)
     category=models.ForeignKey(Category,on_delete=models.CASCADE,null=True)
 
@@ -55,6 +55,10 @@ class Image(models.Model):
     @classmethod
     def filter_by_location(cls,location) :
         images =cls.objects.filter(location__in=location) 
-        return images       
+        return images 
+    @classmethod     
+    def  search_image_by_category(cls,search_term):
+        images =cls.objects.filter(category__category__icontains=search_term)   
+        return images    
 
 
