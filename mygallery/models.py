@@ -53,7 +53,7 @@ class Image(models.Model):
         self.objects.all()  
 
     @classmethod
-    def all_images(cls,location) :
+    def filter_by_location(cls,location) :
         images =cls.objects.filter(location__in=location) 
         return images       
 

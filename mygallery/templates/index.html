@@ -17,21 +17,37 @@
 <body>
     {% include "navbar.html" %}
     {%block content%}
+    <br>
+    <br>
       <div class="container">
           <div class="row">
+            <div class="col-md-4">
+              <h5>Welcome to insta Galliries</h5>
+              <h5>Get A Touch And Feel of Nice Photos</h5>
+              <h5>Insta Galleries Is a Collection <br>
+                of many photos grouped by Categories <br>
+                 from Differents parts along the Globe </h5>
+            </div>
             {%for photo in photos%}
               <div class="col-md-4">
-                  <ul>
-                      <li>
-                        <img src="{{photo.image.url}}" class="img-responsive" alt="Image" width="100px" >
-
-                      </li>
-                  </ul>
-               
-                  
+            
+                <div class="card bg-light mb-3" style="max-width: 18rem;">
+                  <div class="card-header">{{photo.name}} </div>
+                  <img src="{{photo.image.url}}" class="img-responsive" alt="Image" >  
+                 
+                  <div class="card-body">
+                    <b class="card-title"> Taken In :{{photo.location}} </b>
+                    <p class="card-title"> Category :{{photo.category}} </p>
+                    <p class="card-text"> Description :{{photo.description}} </p>
+                  </div>
+                </div>
+            
               </div>
-
               {%endfor%}
+
+              <div class="col-md-4">
+             
+              </div>
           </div>
       </div>
     {%endblock%}

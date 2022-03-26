@@ -3,7 +3,7 @@ from .models import Image,Location
 
 def index(request):
     location =Location.objects.all()
-    photos =Image.all_images(location)
+    photos =Image.filter_by_location(location)
 
 
     return render(request,'index.html',{"photos":photos})
