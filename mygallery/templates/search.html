@@ -16,11 +16,22 @@
 
   {% if photos %}
     {% for photo in photos %}
-      <div class="col-sm-6 col-md-3">
-          <h1>{{photo.category}}</h1>
-          <p>{{photo.name}} </p>
+    
+    <div class="col-md-4">
+  
+      <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">{{photo.name}} </div>
+        <img src="{{photo.image.url}}" class="img-responsive" alt="Image" >  
+       
+        <div class="card-body">
+          <b class="card-title"> Taken In :{{photo.location}} </b>
+          <p class="card-title"> Category :{{photo.category}} </p>
+          <p class="card-text"> Description :{{photo.description}} </p>
+        </div>
       </div>
-    {% endfor %}
+  
+    </div>
+    {%endfor%}
   {% endif %}
   </div>
 </div>
