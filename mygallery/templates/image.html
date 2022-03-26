@@ -1,8 +1,12 @@
 {%extends 'index.html'%}
 {%block content%}
-<div class="card bg-light mb-3" style="max-width: 18rem;">
+<br>
+<br>
+<div class="container">
+  <div class="card bg-light mb-3" style="max-width: 18rem;">
     <div class="card-header">{{photo.name}} </div>
     <img src="{{photo.image.url}}" class="img-responsive" alt="Image" >  
+    
    
     <div class="card-body">
       <b class="card-title"> Taken In :{{photo.location}} </b>
@@ -10,4 +14,7 @@
       <p class="card-text"> Description :{{photo.description}} </p>
     </div>
   </div>
+
+</div>
+
 {%endblock%}
