@@ -8,7 +8,7 @@ This is a web application to display images with their description and loaction 
 
 
 ## website image
-![My Gallery]()
+![My Gallery](https://github.com/Sieva-cmd/My-Gallery/blob/master/media/web2.png)
 
 
 
