@@ -28,9 +28,9 @@ def search_results(request):
 
 def get_image_by_id(request,image_id):
     try: 
-        photo =Image.objects.get(id = image_id)
+        image =Image.objects.get(id = image_id)
 
     except ObjectDoesNotExist:
         raise Http404()
-    return render(request,'image.html',{"photo":photo} )    
+    return render(request,'image.html',{"image":image} )    
 
