@@ -25,7 +25,7 @@ This is a web application to display images with their description and loaction 
 
 ## Requirements
 - have a python enviroment
-- have git
+- install git
 - install Django
 
 
