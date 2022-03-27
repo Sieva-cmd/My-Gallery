@@ -1,5 +1,6 @@
 
 from django.db import models
+import pyperclip
 
 
 # Create your models here.
@@ -59,6 +60,14 @@ class Image(models.Model):
     @classmethod     
     def  search_image_by_category(cls,search_term):
         images =cls.objects.filter(category__category__icontains=search_term)   
-        return images    
+        return images  
+
+    @classmethod
+    def get_image_by_id(cls,image_id):
+   
+        image =cls.objects.filter(id = image_id)
+        return image
+
+           
 
 

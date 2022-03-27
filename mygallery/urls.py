@@ -6,7 +6,8 @@ from . import views
 urlpatterns =[
     path('',views.index,name ='index'),
     re_path(r'search/', views.search_results, name='search_results'),
-    re_path(r'image/(\d+)',views.get_image_by_id,name ='photo')
+    path('<int:image_id>/',views.get_image_by_id,name='photo'),
+    # re_path(r'image/(\d+)',views.get_image_by_id,name ='photo')
 
 ]
 if settings.DEBUG:
