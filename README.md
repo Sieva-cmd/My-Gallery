@@ -1,17 +1,13 @@
 # My Gallery
-This is a web application to display images with their description and loaction .
+This is a web application to display images with their description and location .
 
 
 #### By 
 - [sieva Lucia](https://github.com/Sieva-cmd)
 - A full stack  developer.
 
-
 ## website image
 ![My Gallery](https://github.com/Sieva-cmd/My-Gallery/blob/master/media/web2.png)
-
-
-
 
 ## set up instructions
 -  Go to  Github  using the Link provided.
@@ -21,15 +17,12 @@ This is a web application to display images with their description and loaction 
 - if you don't have a folder cd Documents and mkdir myProject
 - cd myProject and write the command below to clone repository
 - git clone https://github.com/Sieva-cmd/My-Gallery.git 
-- Bingo! You have Pitches application in your machine
+- Bingo! You have My Gallery application in your machine
 
 ## Requirements
 - have a python enviroment
 - install git
 - install Django
-
-
-
 
 
 ## Installation
@@ -40,8 +33,8 @@ Click on this link to view the website in github https://github.com/Sieva-cmd/My
 - HTML - for structuring
 - css - for styling
 - Powershell for running application
-- C -for backed development
-- Django -backend development and frontent framework
+- C - for backed development
+- Django - backend development and frontent framework
 
 ## Running application
 
@@ -53,7 +46,7 @@ Currently there are no known bugs, but incase of any reach to me through musyoka
 
 ## contact information
 -  linkedin: sieva musyoka
--  github :sieva_cmd
+-  github : sieva_cmd
 -  email : musyokasieva@gmail.com
 
 ## Licence 
