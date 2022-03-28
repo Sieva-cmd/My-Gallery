@@ -14,6 +14,19 @@
     </div>
   </div>
 
+  <input class="form-control input-lg" type="text"  value="{{image.image.url}}" id="{{image.id}}.url" style="width: 200px;">
+                       
+  <button type="button" class="btn btn-success  " onclick="copyLink('{{image.id}}.url')" style="margin-bottom:40px">copy</button>
+
 </div>
+{%block script%}
+                        <script>
+                         copyLink = (element) => {
+                         document.getElementById(element).select();
+                         document.execCommand("copy");
+                                                             }
+                         </script>
+  {%endblock%}
 
 {%endblock%}
+
